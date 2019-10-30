@@ -7,7 +7,7 @@ namespace Someniatko\ApiPlatformPagerfantaAdapter;
 use ApiPlatform\Core\DataProvider\PaginatorInterface;
 use Pagerfanta\Pagerfanta;
 
-final class PagerfantaAdapter implements PaginatorInterface, \IteratorAggregate
+final class PagerfantaAdapter implements \IteratorAggregate, PaginatorInterface
 {
     /** @var Pagerfanta */
     private $pagerfanta;
