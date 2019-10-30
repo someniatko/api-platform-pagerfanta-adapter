@@ -1,0 +1,16 @@
+{
+    "name": "someniatko/api-platform-pagerfanta-adapter",
+    "description": "An adapter for Pagerfanta implementing Api Platform's PaginatorInterface",
+    "type": "library",
+    "require": {
+        "php": "^7.1",
+        "api-platform/core": "^2",
+        "pagerfanta/pagerfanta": "^2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Someniatko\\ApiPlatformPagerfantaAdapter\\": "src"
+        }
+    }
+}
