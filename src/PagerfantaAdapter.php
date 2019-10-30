@@ -7,7 +7,7 @@ namespace Someniatko\ApiPlatformPagerfantaAdapter;
 use ApiPlatform\Core\DataProvider\PaginatorInterface;
 use Pagerfanta\Pagerfanta;
 
-final class PagerfantaAdapter implements PaginatorInterface
+final class PagerfantaAdapter implements PaginatorInterface, \IteratorAggregate
 {
     /** @var Pagerfanta */
     private $pagerfanta;
@@ -40,5 +40,10 @@ final class PagerfantaAdapter implements PaginatorInterface
     public function getItemsPerPage(): float
     {
         return (float)$this->pagerfanta->getMaxPerPage();
+    }
+
+    public function getIterator()
+    {
+        return $this->pagerfanta;
     }
 }
